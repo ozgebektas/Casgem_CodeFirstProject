@@ -36,6 +36,10 @@ namespace Casgem_CodeFirstProject.Controllers
             
           
         }
-     
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }

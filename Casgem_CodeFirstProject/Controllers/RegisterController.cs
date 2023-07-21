@@ -1,5 +1,6 @@
 ﻿using Casgem_CodeFirstProject.DAL.Context;
 using Casgem_CodeFirstProject.DAL.Entities;
+using Casgem_CodeFirstProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Casgem_CodeFirstProject.Controllers
         { 
             travelContext.Admins.Add(admin);
             travelContext.SaveChanges();
-            return View("Index","Login");
+            return RedirectToAction("Index","Login");
 
         }
     }

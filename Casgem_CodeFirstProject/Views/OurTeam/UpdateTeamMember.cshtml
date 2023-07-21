@@ -1,0 +1,20 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.OurTeam
+@{
+    ViewBag.Title = "UpdateTeamMember";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Personel güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.OurTeamID)
+    <label>Adı</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Soyadı</label>
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <br />
+    <label>Ünvan</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

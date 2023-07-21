@@ -18,6 +18,7 @@ namespace Casgem_CodeFirstProject.DAL.Context
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Travel> Travels { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<OurTeam> OurTeams { get; set; }
 
     }
 }

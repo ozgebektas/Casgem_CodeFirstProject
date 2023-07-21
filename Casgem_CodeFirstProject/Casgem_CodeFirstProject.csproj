@@ -137,6 +137,7 @@
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OurTeamController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SocailMediaController.cs" />
     <Compile Include="DAL\Context\TravelContext.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="DAL\Entities\Contact.cs" />
     <Compile Include="DAL\Entities\Destination.cs" />
     <Compile Include="DAL\Entities\Guide.cs" />
+    <Compile Include="DAL\Entities\OurTeam.cs" />
     <Compile Include="DAL\Entities\SocialMedia.cs" />
     <Compile Include="DAL\Entities\Travel.cs" />
     <Compile Include="Global.asax.cs">
@@ -163,7 +165,12 @@
     <Compile Include="Migrations\202307211003508_add_city_booking.designer.cs">
       <DependentUpon>202307211003508_add_city_booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307211333429_add_ourteam.cs" />
+    <Compile Include="Migrations\202307211333429_add_ourteam.designer.cs">
+      <DependentUpon>202307211333429_add_ourteam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2599,10 +2606,12 @@
     <Content Include="Templates\AdminLTE-3.0.4\web\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Booking\Index.cshtml" />
     <Content Include="Views\Booking\UpdateBooking.cshtml" />
+    <Content Include="Views\OurTeam\Index.cshtml" />
+    <Content Include="Views\OurTeam\UpdateTeamMember.cshtml" />
+    <Content Include="Views\OurTeam\AddOurTeam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\About\" />
     <Folder Include="Views\City\" />
   </ItemGroup>
@@ -2620,6 +2629,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307211003508_add_city_booking.resx">
       <DependentUpon>202307211003508_add_city_booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307211333429_add_ourteam.resx">
+      <DependentUpon>202307211333429_add_ourteam.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,29 @@
+﻿@model List<Casgem_CodeFirstProject.DAL.Entities.OurTeam>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Ünvan</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.OurTeamID</td>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Title</td>
+            <td><a href="/OurTeam/DeleteTeamMember/@item.OurTeamID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/OurTeam/UpdateTeamMember/@item.OurTeamID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/OurTeam/AddOurTeam/" class="btn btn-outline-primary">Yeni Kategori Girişi</a>
+
