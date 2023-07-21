@@ -11,7 +11,9 @@ namespace Casgem_CodeFirstProject.Controllers
         // GET: ErrorPage
         public ActionResult Page404()
         {
-            return View();
+            Response.StatusCode = 404;
+            Response.TrySkipIisCustomErrors = true;
+            return View("Page404");
         }
 
     }

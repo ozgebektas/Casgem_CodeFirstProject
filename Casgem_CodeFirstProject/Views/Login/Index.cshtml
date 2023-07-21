@@ -12,6 +12,7 @@ Author URL: http://w3layouts.com
 <html lang="zxx">
 
 <head>
+    
     <title>Report Login Form Responsive Widget Template :: W3layouts</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,6 +30,9 @@ Author URL: http://w3layouts.com
 </head>
 
 <body>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
 
     <!-- form section start -->
     <section class="w3l-hotair-form">
@@ -40,12 +44,20 @@ Author URL: http://w3layouts.com
                     <div class="content-wthree">
                         <h2>Log In</h2>
                         <form method="post">
-                            <input type="text" class="text" name="username" placeholder="Kullanıcı Adı" required="" autofocus>
-                            <input type="password" class="password" name="password" placeholder="Şifreniz" required="" autofocus>
+                            
+                            <div class="form-check">
+                                <input type="text" class="text" name="username" placeholder="Kullanıcı Adı" required="" autofocus>
+                                <input type="password" class="password" name="password" placeholder="Şifreniz" required="" autofocus />
+                                @*<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">*@
+                                    <!--Default radio
+                                </label>-->
+                            </div>
                             <button class="btn" type="submit">Log In</button>
                         </form>
 
-                        <p class="account">Don't have an account? <a href="#signup">Register</a></p>
+                        <p class="account">Don't have an account? <a href="/Register/Index/">Register</a></p>
+                        @*@Html.Action("RegisterPartial","Login")*@
                     </div>
                     <div class="w3l_form align-self">
                         <div class="left_grid_info">
@@ -57,16 +69,9 @@ Author URL: http://w3layouts.com
             <!-- //form -->
         </div>
         <!-- copyright-->
-        <div class="copyright text-center">
-            <p class="copy-footer-29">
-                © 2021 Report Login Form. All rights reserved | Design by <a href="https://w3layouts.com">W3layouts</a>
-            </p>
-        </div>
         <!-- //copyright-->
     </section>
     <!-- //form section start -->
-   
-
 
 </body>
 

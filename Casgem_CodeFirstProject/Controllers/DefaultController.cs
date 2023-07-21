@@ -1,4 +1,5 @@
 ﻿using Casgem_CodeFirstProject.DAL.Context;
+using Casgem_CodeFirstProject.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,57 +10,66 @@ namespace Casgem_CodeFirstProject.Controllers
 {
     public class DefaultController : Controller
     {
-        
-            TravelContext travelContext = new TravelContext();
-            public ActionResult Index()
-            {
-                return View();
-            }
-            public PartialViewResult PartialHead()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialNavbar()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialSliderScript()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialSlider()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialBooking()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialFeature()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialDestinations()
-            {
-                var values = travelContext.Destinations.ToList();
-                return PartialView(values);
-            }
-            public PartialViewResult PartialAbout()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialBookingCover()
-            {
-                return PartialView();
-            }
-            public PartialViewResult PartialFooter()
-            {
-                return PartialView();
-            }
 
-            public PartialViewResult PartialMainScript()
-            {
-                return PartialView();
-            }
+        TravelContext travelContext = new TravelContext();
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public PartialViewResult PartialHead()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialNavbar()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialSliderScript()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialSlider()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialBooking()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult PartialBooking(Booking booking)
+        {
+            booking.BookingStatus = "Aktif";
+            travelContext.Bookings.Add(booking);
+            travelContext.SaveChanges();
+            return PartialView();
+        }
+        public PartialViewResult PartialFeature()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialDestinations()
+        {
+            var values = travelContext.Destinations.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialAbout()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialBookingCover()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialMainScript()
+        {
+            return PartialView();
         }
     }
+}

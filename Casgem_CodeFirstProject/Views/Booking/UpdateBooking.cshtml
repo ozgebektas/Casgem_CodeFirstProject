@@ -1,0 +1,33 @@
+﻿﻿@model Casgem_CodeFirstProject.DAL.Entities.Booking
+
+@{
+    ViewBag.Title = "UpdateBooking";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2>Rezervasyon Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.BookingID)
+    <label>Müşteri Adı: </label>
+    @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control border" })
+    <br />
+
+    <label>Şehir: </label>
+    @Html.TextBoxFor(x => x.Destination, new { @class = "form-control border" })
+    <br />
+
+    <label>Gün Sayısı: </label>
+    @Html.TextBoxFor(x => x.Duration, new { @class = "form-control border" })
+    <br />
+    <label>Mail Adresi: </label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control border" })
+    <br />
+
+    <label>Tarih: </label>
+    @Html.TextBoxFor(x => x.BookingDate, "{0:dd/MM/yyyy}", new { @class = "form-control border" })
+    <br />
+    <a href="/Booking/Index/" class="btn btn-danger">İptal</a>
+    <button class="btn btn-warning">Güncelle</button>
+</form>
